@@ -19,51 +19,53 @@
 </head>
 <body>
     <div class="bg-[url(../static/gold_bg.jpg)] bg-cover bg-fixed h-screen">
-        <nav class="bg-transparent text-white font-pop p-4 md:p-5 md:flex md:items-center md:justify-between">
-            <div class="flex justify-between items-center w-full">
-                <span>
-                    <a href="index.html" class="">
-                        <img src="../static/logo_white.png" class="mr-4 h-7 md:h-10 inline" alt="MBK Logo"/>
-                    </a>
-                </span>
-                <span class="text-2xl cursor-pointer mx-2 md:hidden block">
-                    <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
-                </span>
-        
-                <ul class="absolute w-full left-0 py-4 opacity-0 top-[-400px] transition-all ease-in duration-500 z-[1] md:flex md:items-center md:z-auto md:static md:w-auto md:py-0 md:pl-0 md:opacity-100">
-                    <li class="mx-4 my-6 md:my-0">
-                        <a href="#" class="duration-300">
-                            Home
-                        </a>         
-                    </li>
-                    <li class="mx-4 my-6 md:my-0">
-                        <a href="#" class="duration-300">
-                            Serviços
-                        </a>         
-                    </li>
-                    <li class="mx-4 my-6 md:my-0">
-                        <a href="#" class="duration-300">
-                            Clientes
-                        </a>         
-                    </li>
-                    <li class="mx-4 my-6 md:my-0">
-                        <a href="#" class="duration-300">
-                            Quem somos
-                        </a>         
-                    </li>
-                    <li class="mx-4 my-6 md:my-0">
-                        <a href="#" class="duration-300">
-                            FQA
-                        </a>         
-                    </li>
-                    <li class="mx-4 my-6 md:my-0">
-                        <a href="#" class="duration-300">
-                            Contato
-                        </a>         
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div class="mx-2 md:mx-18 lg:mx-20">
+            <nav class="bg-transparent text-white font-pop p-4 md:p-5 md:flex md:items-center md:justify-between">
+                <div class="flex justify-between items-center w-full">
+                    <span>
+                        <a href="index.html" class="">
+                            <img src="../static/logo_white.png" class="md:ml-6 h-7 md:h-10 inline" alt="MBK Logo"/>
+                        </a>
+                    </span>
+                    <span class="text-2xl cursor-pointer mx-2 md:hidden block">
+                        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                    </span>
+            
+                    <ul class="absolute w-full left-0 py-4 opacity-0 top-[-400px] transition-all ease-in duration-500 z-[1] md:flex md:items-center md:z-auto md:static md:w-auto md:py-0 md:pl-0 md:opacity-100">
+                        <li class="mx-4 my-6 md:my-0">
+                            <a href="#" class="duration-300">
+                                Home
+                            </a>         
+                        </li>
+                        <li class="mx-4 my-6 md:my-0">
+                            <a href="#" class="duration-300">
+                                Serviços
+                            </a>         
+                        </li>
+                        <li class="mx-4 my-6 md:my-0">
+                            <a href="#" class="duration-300">
+                                Clientes
+                            </a>         
+                        </li>
+                        <li class="mx-4 my-6 md:my-0">
+                            <a href="#" class="duration-300">
+                                Quem somos
+                            </a>         
+                        </li>
+                        <li class="mx-4 my-6 md:my-0">
+                            <a href="#" class="duration-300">
+                                FQA
+                            </a>         
+                        </li>
+                        <li class="mx-4 my-6 md:my-0">
+                            <a href="#" class="duration-300">
+                                Contato
+                            </a>         
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </div>
     <script>
         function Menu(e){
