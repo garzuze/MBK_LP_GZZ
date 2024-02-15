@@ -16,12 +16,13 @@
         <!-- https://www.youtube.com/watch?v=yE9DLIoDwCg responsive header -->
     <!-- Slider: -->
         <!-- https://youtu.be/ThaIBFd387A?si=dSX6qPrCINffzCbT -->
+        <!-- https://youtu.be/DA5zP58N1pk?si=sc-hjR44pC9iI5nS -->
     <!-- Outros propósitos: -->
         <!-- https://youtu.be/sOnBG2wUm1s?si=kzrHm7jrVVNvuF2U How to Use Custom Fonts with Tailwind CSS -->
 </head>
-<body class="bg-[url(../static/gold_bg.jpg)] bg-cover bg-fixed h-screen">
-    <div>
-        <div class="mx-2 md:mx-18 lg:mx-20">
+<body class="bg-neutral-950">
+    <div class="bg-[url(../static/gold_bg.jpg)] bg-cover bg-no-repeat">
+        <div class="mx-2 md:mx-18 lg:mx-20 h-lvh sm:h-[820px]">
             <nav class="bg-transparent text-white font-pop p-4 md:p-5 md:flex md:items-center md:justify-between">
                 <div class="flex justify-between items-center w-full">
                     <span>
@@ -67,20 +68,20 @@
                     </ul>
                 </div>
             </nav>
-            <div class="w-full lg:w-1/2 md:w-4/5 p-6 md:p-12 font-dm mx-2">
-                <p class="text-white uppercase text-xs tracking-widest my-8 subpixel-antialiased">MBK contabilidade & consultoria</p>
-                <h1 class="text-3xl font-bold text-white lg:text-6xl mt-8">
+            <div class="w-full lg:w-1/2 md:w-4/5 p-6 md:p-12 font-dm mx-2 text-white">
+                <p class="uppercase text-xs tracking-widest my-8 subpixel-antialiased">MBK contabilidade & consultoria</p>
+                <h1 class="text-3xl font-bold lg:text-6xl">
                     Não é startup.
                 </h1>
-                <h1 class="text-3xl font-bold text-white lg:text-6xl">
+                <h1 class="text-3xl font-bold lg:text-6xl">
                     É tradição com tecnologia
                 </h1>
                 <p class="text-lg text-gray-200 lg:text-xl my-8">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eum consectetur exercitationem officiis illo at quibusdam ad blanditiis rerum officia laudantium, commodi veritatis ipsum dolorum nisi laboriosam possimus qui illum?
                 </p>
-                <div class="relative inline-flex group m-4">
+                <div class="relative inline-flex group sm:m-4">
                     <div class="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#635632] via-[#8e793e] to-[#ab964f] rounded-lg blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
-                    <a class="relative inline-flex items-center justify-center px-5 py-2.5 font-semibold text-white transition-all duration-200 bg-[#231f20] rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#231f20]" role="button">
+                    <a class="relative inline-flex items-center justify-center px-5 py-2.5 font-semibold transition-all duration-200 bg-[#231f20] rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#231f20]" role="button">
                         Comece agora
                         <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -93,7 +94,72 @@
             </div>
         </div>
     </div>
+    
+    <div class="w-full h-[560px] text-white">
+        <div class="image-slider w-full h-full md:w-5/6 mx-auto py-6 my-8 rounded-xl relative bg-cover bg-center bg-[url(../static/bruno.jpg)] transition">
+            <div class="arrow-left w-12 h-12 flex justify-center items-center cursor-pointer absolute top-[40%] text-2xl text-stone-950 hover:text-stone-200 transition-all left-0.5 sm:left-4 ">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+            <div class="arrow-right w-12 h-12 flex justify-center items-center cursor-pointer absolute top-[40%] text-2xl text-stone-950 hover:text-stone-200 transition-all right-0.5 sm:right-4">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+            <div class="caption absolute bottom-0 left-0 w-full pt-16 px-4 pb-8 bg-gradient-to-b from-transparent to-black">
+                <h1 class="text-2xl font-bold">Bruno</h1>
+                <p>We are the champions, my friends</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="w-full my-8">
+
+    </div>
     <script>
+        const slider = document.querySelector('.image-slider')
+        const arrow_left = document.querySelector('.arrow-left')
+        const arrow_right = document.querySelector('.arrow-right')
+        const slider_caption = document.querySelector('.caption h1')
+        const slider_description = document.querySelector('.caption p')
+        const images = ['bruno.jpg', 'clarice.jpg', 'philippe.jpg', 'lucas.jpg']
+        const slider_captions = ['Bruno', 'Clarice', 'Philippe', 'Lucas']
+        const slider_descriptions = [
+            "We are the champions, my friends",
+            "And we'll keep on fighting till the end",
+            "No time for losers",
+            "'Cause we are the champions of the World"
+        ]
+
+        let id = 0
+
+        function Slide(id){
+            // Changes the image and the caption of the slider 
+            slider.style.backgroundImage = `url(../static/${images[id]})`
+            slider.classList.add('image-fade')
+            // Take the class off so we can use it again
+            setTimeout(() => {
+                slider.classList.remove('image-fade')
+            }, 550)
+            slider_caption.innerText = slider_captions[id]
+            slider_description.innerText = slider_descriptions[id]
+        }
+
+        arrow_left.addEventListener('click', () => {
+            id--
+            if (id < 0) {
+                // Changes to the last image
+                id = images.length - 1;
+            }
+            Slide(id)
+        })
+
+        arrow_right.addEventListener('click', () => {
+            id++
+            if (id > images.length - 1) {
+                // Changes to first image
+                id = 0
+            }
+            Slide(id)
+        })
+
         function Menu(e){
           let list = document.querySelector('ul');
           e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))

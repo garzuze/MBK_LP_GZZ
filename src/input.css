@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CUSTOM SCROLLBAR */
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -20,4 +21,13 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #110f10;
+}
+
+/* Class used in JS event */
+.image-fade {
+    animation: ImageFadeIn 0.5s ease-in-out;
+}
+@keyframes ImageFadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1; }
 }
