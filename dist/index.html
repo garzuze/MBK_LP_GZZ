@@ -96,7 +96,7 @@
     </div>
     
     <div class="w-full h-[560px] text-white">
-        <div class="image-slider w-full h-full md:w-5/6 mx-auto py-6 my-8 rounded-xl relative bg-cover bg-center bg-[url(../static/bruno.jpg)] transition">
+        <div class="image-slider w-full md:w-5/6 h-full mx-auto py-6 my-8 rounded-xl relative bg-cover bg-center bg-[url(../static/bruno.jpg)] transition">
             <div class="arrow-left w-12 h-12 flex justify-center items-center cursor-pointer absolute top-[40%] text-2xl text-stone-950 hover:text-stone-200 transition-all left-0.5 sm:left-4 ">
                 <ion-icon name="arrow-back-outline"></ion-icon>
             </div>
@@ -110,9 +110,64 @@
         </div>
     </div>
     </div>
-    <div class="w-full my-8">
+    <section class="social-proof my-8 mx-2 md:mx-18 lg:mx-20">
+        <div class="py-8 px-4 mx-auto w-full text-center lg:py-16 lg:px-6">
+            <div class="mx-auto max-w-screen-sm">
+                <h2 class="mb-4 text-3xl lg:text-4xl font-dm font-bold text-white">O que nossos clientes estão dizendo</h2>
+                <p class="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. A similique quia dolorem commodi explicabo eaque itaque quis dignissimos</p>
+            </div> 
+            <div class="grid w-5full mb-8 lg:mb-12 lg:grid-cols-2 mx-auto">
+                <figure class="flex flex-col justify-center items-center p-8 text-center bg-zinc-800 border-b border-[#ab964f] shadow-2xl shadow-[#ab964f]/50 md:p-12 lg:border-r lg:rounded-tr-none rounded-t-2xl"> 
+                    <video>
+                        <!-- maneiro -->
+                    </video>
+                    <figcaption class="flex justify-center items-center space-x-3">
+                        <img class="w-9 h-9 rounded-full" src="../static/lucas.jpg" alt="profile picture">
+                        <div class="space-y-0.5 font-medium text-left">
+                            <div class="text-gray-300">Lucas Garzuze Cordeiro</div>
+                            <div class="text-sm font-light text-gray-500">Empresa maneira</div>
+                        </div>
+                    </figcaption>    
+                </figure>
+                <figure class="flex flex-col justify-center items-center p-8 text-center bg-zinc-800 border-b border-[#ab964f] shadow-2xl shadow-[#ab964f]/50 md:p-12 lg:rounded-tr-2xl">
+                    <video>
+                        <!-- maneiro -->
+                    </video>
+                    <figcaption class="flex justify-center items-center space-x-3">
+                        <img class="w-9 h-9 rounded-full" src="../static/bruno.jpg" alt="profile picture">
+                        <div class="space-y-0.5 font-medium text-left">
+                            <div class="text-gray-300">Bruno Fey</div>
+                            <div class="text-sm font-light text-gray-500">Empresa bacana</div>
+                        </div>
+                    </figcaption>    
+                </figure>
+                <figure class="flex flex-col justify-center items-center p-8 text-center bg-zinc-800 border-b border-[#ab964f] shadow-2xl shadow-[#ab964f]/50 lg:border-b-0 md:p-12 lg:border-r lg:rounded-bl-2xl">
+                    <video>
 
-    </div>
+                    </video>
+                    <figcaption class="flex justify-center items-center space-x-3">
+                        <img class="w-9 h-9 rounded-full" src="../static/philippe.jpg" alt="profile picture">
+                        <div class="space-y-0.5 font-medium text-left">
+                            <div class="text-gray-300">Philippe</div>
+                            <div class="text-sm font-light text-gray-500">TCC sobre tabuada do 7</div>
+                        </div>
+                    </figcaption>    
+                </figure>
+                <figure class="flex flex-col justify-center items-center p-8 text-center bg-zinc-800 border-[#ab964f] shadow-2xl shadow-[#ab964f]/50 md:p-12 rounded-b-2xl lg:rounded-bl-none">
+                    <video>
+                        
+                    </video>
+                    <figcaption class="flex justify-center items-center space-x-3">
+                        <img class="w-9 h-9 rounded-full" src="../static/clarice.jpg" alt="profile picture">
+                        <div class="space-y-0.5 font-medium text-left">
+                            <div class="text-gray-300">Dona Clarice</div>
+                            <div class="text-sm font-light text-gray-500">Empresa maneira</div>
+                        </div>
+                    </figcaption>    
+                </figure>
+            </div>
+        </div>
+    </section>
     <script>
         const slider = document.querySelector('.image-slider')
         const arrow_left = document.querySelector('.arrow-left')
