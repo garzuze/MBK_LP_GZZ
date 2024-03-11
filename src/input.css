@@ -31,3 +31,28 @@
     0% { opacity: 0;}
     100% { opacity: 1; }
 }
+
+/* Classes used in the FAQ */
+.answer {
+    transition: max-height 1s ease-in-out;
+}
+
+.faq.active .answer {
+    max-height: 300px;
+}
+
+.question {
+    transition: background-color 1s ease-in-out;
+}
+
+.faq.active .question {
+    background-color: #8e793e;
+}
+
+.faq.active ion-icon {
+    transform: rotate(180deg);
+}
+
+ion-icon {
+    transition: transform .2s ease-in-out;
+}
